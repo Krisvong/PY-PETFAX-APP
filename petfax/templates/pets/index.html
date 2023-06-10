@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to PetFax</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="index-page"> <!-- Added class "index-page" to body -->
+    <h1>Welcome to PetFax</h1>
+    <h2>We are a no-kill shelter dedicated to finding our pets loving homes and educating the public with fun facts!</h2>
+    <ul class="pet-list">
+        <!-- Loop through the 'pets' list or iterable -->
+        {% for pet in pets %}
+            <li class="pet-item">
+                <!-- Create a link for each pet using its 'pet_id' attribute -->
+                <a href="{{ url_for('pet.show', pet_id=pet.pet_id) }}">
+                    <!-- Display the thumbnail image for the pet -->
+                    <img class="pet-thumbnail" src="{{ pet.pet_photo }}" alt="Photo of {{ pet.pet_name }}">
+                    <div class="pet-name">{{ pet.pet_name }}</div>
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+    <div class="callout">
+        We'd love to learn more fun facts! <a href="/facts/new">Submit some here.</a>
+    </div>
+</body>
+</html>

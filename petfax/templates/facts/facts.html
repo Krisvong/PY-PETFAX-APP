@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Fun Fact</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body class="facts-page">
+    <div class="form-container">
+        <h1>Submit Fun Fact</h1>
+        <p>If you have a fun new fact, please enter it here:</p>
+        <form method="post" action="{{ url_for('fact.submit_fact') }}">
+            <div class="input-box">
+                <label for="first_name">First Name:</label>
+                <input type="text" name="first_name" id="first_name" required>
+            </div>
+            <div class="input-box">
+                <label for="last_name">Last Name:</label>
+                <input type="text" name="last_name" id="last_name" required>
+            </div>
+            <div class="input-box">
+                <label for="fact">Fun Fact:</label>
+                <textarea name="fact" id="fact" rows="5" required></textarea>
+            </div>
+            <div class="input-box">
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+    <div class="facts-link-container">
+        <a href="/pets">← Go Back</a>
+    </div>
+</body>
+</html>

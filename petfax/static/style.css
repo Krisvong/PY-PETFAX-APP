@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=ABeeZee&family=Abel&family=Bowlby+One&display=swap');
+
+:root {
+  /* Fonts */
+  --header-font: 'Bowlby One', impact;
+  --accent-font: 'Abel', verdana;
+  --body-font: 'ABeeZee', helvetica;
+  /* Colors */
+  --light-accent: #F5F3EB;
+  --main-accent: #7FA4AD;
+  --second-accent: #DE9D49;
+}
+
+body, h1, ul {
+    margin: 0;
+    padding: 0;
+  }
+
+.index-page {
+    /* Specific styles for index.html */
+    display: flex;
+    flex-direction: column; /* Added flex-direction to create a vertical layout */
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: var(--body-font), sans-serif;
+    background-color: var(--light-accent);
+    color: var(--main-accent);
+  }
+  
+  .index-page h1 {
+    /* Specific styles for the heading in index.html */
+    margin-top: 0; /* Remove the margin from the top */
+    color: var(--main-accent);
+    font-family: 'Bowlby One', impact;
+    font-size: 4em;
+    text-align: center;
+  }
+
+  .index-page h2 {
+    /* Specific styles for the subheading in index.html */
+    margin: 20px 0; /* Add margin to create spacing */
+    color: var(--main-accent);
+    font-family: var(--accent-font), sans-serif;
+    font-size: 1.5em;
+    text-align: center;
+  }
+
+  .index-page .pet-item {
+    margin: 10px;
+    padding: 10px; /* Add padding to create space between the images */
+  }
+  
+  .index-page .pet-list {
+    /* Specific styles for the pet list in index.html */
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin-top: 40px;
+  }
+  
+  .index-page .pet-name {
+    text-align: center;
+    margin-top: 5px;
+  }
+  
+  .index-page .pet-thumbnail {
+    width: 400px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 10%;
+  }
+
+  .pet-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: var(--body-font), sans-serif;
+    background-color: var(--light-accent);
+    color: var(--main-accent);
+  }
+  
+  .pet-page h1 {
+    margin-top: 0;
+    color: var(--main-accent);
+    font-family: var(--header-font), sans-serif;
+    font-size: 4em;
+    text-align: center;
+  }
+  
+  .pet-page img {
+    width: 500px;
+    height: 600px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-top: 20px;
+    border: 8px solid var(--second-accent);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .pet-page p {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  /* Additional styles for links */
+  .pet-page a {
+    color: var(--second-accent);
+    text-decoration: none;
+  }
+  
+  .pet-page a:hover {
+    text-decoration: underline;
+  }
+
+  .link-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.link-container a {
+    margin: 0 10px;
+    font-size: 18px;
+    text-decoration: none;
+    color: var(--second-accent);
+}
+  
+.facts-page {
+    font-family: var(--body-font), sans-serif;
+    background-color: var(--light-accent);
+    color: var(--main-accent);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form-container {
+    text-align: center;
+    width: 400px;
+    margin: 0 auto; /* Add auto margin to horizontally center the container */
+    padding: 20px;
+    background-color: var(--light-accent);
+    border: 2px solid var(--second-accent);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.input-box {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.form-container h1 {
+    margin-top: 0;
+    color: var(--main-accent);
+    font-family: var(--header-font), sans-serif;
+    font-size: 2.5em;
+}
+
+.input-box {
+    text-align: center;
+}
+
+
+.form-container p {
+    margin-bottom: 20px;
+}
+
+.form-container label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--main-accent);
+    font-family: var(--accent-font), sans-serif;
+    font-size: 1.2em;
+}
+
+.form-container input,
+.form-container textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--second-accent);
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.form-container button {
+    padding: 10px 20px;
+    background-color: var(--main-accent);
+    color: var(--light-accent);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.form-container button:hover {
+    background-color: var(--second-accent);
+}
+
+.facts-link-container {
+    display: flex;
+    justify-content: center;
+    position: fixed; /* Change position to fixed */
+    bottom: 40px; /* Position at the bottom */
+    width: 100%; /* Set full width */
+    background-color: var(--light-accent);
+    padding: 10px 0; /* Add some vertical padding */
+   
+}
+
+.facts-link-container a {
+    margin: 0 10px;
+    font-size: 20px;
+    text-decoration: none;
+    color: var(--second-accent);
+}
+
+  /* Additional styles for links */
+  a {
+    color: var(--second-accent);
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
