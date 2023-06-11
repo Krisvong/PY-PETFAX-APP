@@ -22,8 +22,8 @@ def show(pet_id):
     pet = next((p for p in pets if p['pet_id'] == pet_id), None)
 
     if pet:
-        #If a pet with the given pet_id is found, render the 'pet.html' template and pass the 'pet' object as a variable to the template
-        return render_template('pets/pet.html', pet=pet)
+        #If a pet with the given pet_id is found, render the new.html' template and pass the 'pet' object as a variable to the template
+        return render_template('pets/new.html', pet=pet)
     else:
         # If no pet with the given pet_id is found, return a simple message indicating that the pet was not found
         return 'Pet not found'

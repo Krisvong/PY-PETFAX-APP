@@ -15,9 +15,9 @@ def create_app():
         return 'Hello, PetFax!'
     
     # register pet blueprint
-    from . import pet
+    from . import new
     # call the register_blueprint method on the app instance and pass the pet blueprint into the method
-    app.register_blueprint(pet.bp)
+    app.register_blueprint(new.bp)
 
     # register fact bluprint
     from . import fact
