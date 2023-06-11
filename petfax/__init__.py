@@ -7,7 +7,7 @@ from flask_migrate import Migrate
 # define a function named create_app that will be our application factory
 def create_app():
     # inside that function, create a new app instance of Flask
-    app = Flask(__name__, template_folder='templates')
+    app = Flask(__name__)
     # still inside the function, create a basic index route that goes to '/' and just returns 'Hello, PetFax!' as a string.
 
     # database config
@@ -27,9 +27,9 @@ def create_app():
         return 'Hello, PetFax!'
     
     # register pet blueprint
-    from . import new
+    from . import pet
     # call the register_blueprint method on the app instance and pass the pet blueprint into the method
-    app.register_blueprint(new.bp)
+    app.register_blueprint(pet.bp)
 
     # register fact bluprint
     from . import fact

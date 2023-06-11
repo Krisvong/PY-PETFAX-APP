@@ -7,9 +7,19 @@
     <title>PetFax | Submitted Facts</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
-<body>
+<body class="fax-page">
     <div class="container">
         <H1>UserFax</H1>
+        {% for fact in facts %}
+            <!-- Loop through each 'fact' object in the 'facts' list -->
+            <H4>Submitted by {{ fact.submitter }}</H4>
+            <!-- Display the submitter's name for each fact -->
+            {{ fact.fact }}
+            <!-- Display the fact content -->
+        {% endfor %}
+    </div>
+    <div class="facts-link-container">
+        <a href="/pets">← Go Back</a>
     </div>
 </body>
 </html>

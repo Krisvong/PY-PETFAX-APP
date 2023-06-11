@@ -225,6 +225,39 @@ body, h1, ul {
     color: var(--second-accent);
 }
 
+/* Fax page */
+
+.fax-page body {
+  font-family: var(--body-font), sans-serif;
+  background-color: var(--light-accent);
+  color: var(--main-accent);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.container h1 {
+  margin-top: 0;
+  color: var(--main-accent);
+  font-family: var(--header-font), sans-serif;
+  font-size: 4em;
+  text-align: center;
+}
+
+.container h4 {
+  margin: 20px 0;
+  color: var(--second-accent);
+  font-family: var(--accent-font), sans-serif;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+
   /* Additional styles for links */
   a {
     color: var(--second-accent);

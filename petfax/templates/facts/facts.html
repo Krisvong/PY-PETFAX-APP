@@ -10,27 +10,27 @@
 <body class="facts-page">
     <div class="form-container">
         <h1>Submit Fun Fact</h1>
-        <p>If you have a fun new fact, please enter it here:</p>
-        <form method="post" action="{{ url_for('fact.submit_fact') }}">
-            <div class="input-box">
-                <label for="first_name">First Name:</label>
-                <input type="text" name="first_name" id="first_name" required>
-            </div>
-            <div class="input-box">
-                <label for="last_name">Last Name:</label>
-                <input type="text" name="last_name" id="last_name" required>
-            </div>
-            <div class="input-box">
-                <label for="fact">Fun Fact:</label>
-                <textarea name="fact" id="fact" rows="5" required></textarea>
-            </div>
-            <div class="input-box">
-                <button type="submit">Submit</button>
-            </div>
-        </form>
-    </div>
-    <div class="facts-link-container">
-        <a href="/pets">← Go Back</a>
+        <div class="callout">
+            If you have some fun animal facts you'd like to share, please submit them! We may use them in the future.
+        </div>
+        <div class="facts-container">
+            <form method="post" action="{{ url_for('fact.submit_fact') }}">
+                <div class="input-box">
+                    <label for="submitter"><h2>Name</h2></label>
+                    <input type="text" name="submitter" id="submitter" required>
+                </div>
+                <div class="input-box">
+                    <label for="fact"><h2>Fact</h2></label>
+                    <textarea name="fact" id="fact" rows="5" required></textarea>
+                </div>
+                <div class="input-box">
+                    <button type="submit">Submit the Fact</button>
+                </div>
+            </form>
+        </div>
+        <div class="facts-link-container">
+            <a href="/pets">← Go Back</a>
+        </div>
     </div>
 </body>
 </html>
